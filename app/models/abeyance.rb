@@ -1,0 +1,2 @@
+class Abeyance < ApplicationRecord
+end

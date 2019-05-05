@@ -1,0 +1,26 @@
+<div class="page-header">
+  <%= link_to underwriters_path, class: 'btn btn-default' do %>
+    <span class="glyphicon glyphicon-list-alt"></span>
+    Back
+  <% end %>
+  <%= link_to edit_underwriter_path(@underwriter), class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-pencil"></span>
+    Edit
+  <% end %>
+  <h1>Show underwriter</h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt>Name:</dt>
+  <dd><%= @underwriter.name %></dd>
+
+  <dt>Email:</dt>
+  <dd><%= @underwriter.email %></dd>
+
+  <dt>Phone:</dt>
+  <dd><%= @underwriter.phone %></dd>
+
+  <dt>Company:</dt>
+  <dd><%= @underwriter.company %></dd>
+
+</dl>

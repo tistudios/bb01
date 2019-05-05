@@ -1,0 +1,35 @@
+<div class="page-header">
+  <%= link_to new_abeyance_path, class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-plus"></span>
+    New Abeyance
+  <% end %>
+  <h1>Listing abeyances</h1>
+</div>
+
+<div class="table-responsive">
+  <table class="table table-striped table-bordered table-hover">
+    <thead>
+      <tr>
+            <th>Start time</th>
+            <th>End time</th>
+            <th>Title</th>
+            <th>Reminder</th>
+            <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <%= content_tag_for(:tr, @abeyances) do |abeyance| %>
+            <td><%= abeyance.start_time %></td>
+            <td><%= abeyance.end_time %></td>
+            <td><%= abeyance.title %></td>
+            <td><%= abeyance.reminder %></td>
+            <td><%= link_to 'Show', abeyance %></td>
+        <td><%= link_to 'Edit', edit_abeyance_path(abeyance) %></td>
+        <td><%= link_to 'Destroy', abeyance, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% end %>
+    </tbody>
+  </table>
+</div>
